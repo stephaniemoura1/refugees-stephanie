@@ -1,0 +1,326 @@
+---
+title: Is welfare state the priority? Refugees flow  through Europe and their target countries
+author:
+  - name: Stephanie Moura de Oliveira
+    email: stephaniemoura.cp@gmail.com
+    affiliation: Universidade Federal de Pernambuco - UFPE
+    footnote: Corresponding Author
+
+address:
+  - code: Universidade Federal de Pernambuco - UFPE
+    address: Av. Prof. Moraes Rego, 1235 - Cidade Universitária, Recife - PE, 50670-901
+
+RESUMO (APAGAR ISSO)
+abstract: | 
+  Fazer o resumo **********
+  This is the abstract.
+
+  It consists of two paragraphs.
+
+
+
+ REFEDERENCIAS (APAGAR ISSO)
+journal: ""
+date: "`r Sys.Date()`"
+references: 
+  - id: stephanie001algoemrelacaoacitacaoeuquecrio
+    title: Development care for children with special health needs in home care at Paraná - Brazil
+    author: 
+      - family: sobrenome
+        given: nome
+    container title: nome da revista que tirou
+    volume: se tiver
+    URL: doi n sei oq
+    DOI: doi
+    issue: edição 
+    publisher: nao precisa
+    page: paginas
+    type: article-journal
+    issued:
+      year: 2019
+      month: 1
+  
+output: rticles::elsevier_article
+---
+
+_Text based on elsarticle sample manuscript, see [http://www.elsevier.com/author-schemas/latex-instructions#elsarticle](http://www.elsevier.com/author-schemas/latex-instructions#elsarticle)_
+
+
+Introduction and Theory
+==========================
+
+Countries with higher rates of Welfare State lead to more syrian asylum applications? With the advance of the refugee crisis and a consequent increase on the number of people in need of a new homeland to call its own, European countries have reshaped their immigration policies in order to accommodate (or not) the growing number of refugee requests. 
+
+The country whose internal conflict has caused more nationals to leave its territory was Syria, since after the start of the Arab Spring in 2010 and a series of popular protests in the country, that progressed to a violent armed revolt, influenced by other protests in the Arab world. 
+
+The conflict shows itself in two fronts: one compound by oppositors of the President Bashar Al-Assad, that claim to be struggling to oust his power and then later install a more democratic leadership in the country; and the other composed by the Assad and its government, who claims to be only fighting armed terrorists aimed at destabilizing the country. Over the years, this war with an initial political cause, turned itself into a "power struggle", also embracing aspects, with sectarian and religious nature, and many factions emerged fighting against each other and the government. 
+
+In the middle of this conflict, many civilians found themselves in the middle of bombings and more than five million Syrians would have sought refuge abroad to escape the fighting, most of them seeking refuge abroad. The conflict generated a huge migratory wave of Syrians and Arabs towards Europe. It is the largest migratory wave and consequent humanitarian crisis faced by Europe since World War II. According to the Vice-President of the European Commission, Frans Timmermans, it is a "world crisis that needs a European answer".
+
+This migratory flow reached critical levels throughout 2015, with an exponential increase (hundreds of thousands of people) trying to enter Europe and applying for asylum, fleeing their countries due to wars, conflicts, hunger, religious intolerance, terrible climate change, human rights violations, hopelessness and others, and adding to all this, a massive action of intimidation, violence and oppression carried out by groups that control illegal trafficking and exploit these totally vulnerable migrants (LENEIDE, 2015).
+
+But why did so many migrants seek Europe to take refuge instead of seeking asylum in other Middle Eastern or Asian countries closer to their country of origin? The answer to this can maybe be found on a definition of Welfare State:
+ “A welfare state is a state in which organized power is deliberately used (through politics and administration) in an effort to modify the play of the market forces in at least three directions
+- first, by guaranteeing individuals and families a 	minimum income irrespective of the market value of their work or their property;
+- second, by narrowing the extent of insecurity by 	enabling individuals and families to meet certain “social contingencies” (for example, sickness, old age and unemployment) which lead otherwise to individual and family crisis; and
+- third, by ensuring that all citizens without distinction of status or class are offered the best standards available in relation to a certain agreed range of social services.” (Briggs, 1961)
+
+The sociologist T. H. Marshall  described the modern welfare state as a distinctive combination of democracy, welfare and capitalism. As a type of mixed economy, the welfare state funds the governmental institutions for healthcare and education along with direct benefits paid to individual citizens. Modern welfare states include Germany and France, Belgium and the Netherlands, as well as the Nordic countries, which employ a system known as the Nordic Model. The various implementations of the welfare state fall into three categories: (i) social democratic, (ii) conservative, and (iii) liberal. 
+
+That said, this paper tries to enlight if countries with a higher Welfare State attract more requests for refuge, these being preferred by refugees from Syria. This analysis is important to help the understanding of the movement trends of refugees if they are looking for countries with a higher quality of life or just a country where they can allocate themselves to escape the conflicts. This may also lead to explanations about the preference of refugees to remain in the place of refuge after the conflict ends or to return to their homeland.
+
+The hypothesis that this paper seeks to prove or falsify is that with the refugee crisis in Syria, the number of requests for refuge was higher in European countries with a higher quality of life.
+
+O QUE COLOCAR ENTRE * UM ASTERISCO DE CADA LADO* FICA EM ITALICO
+O QE COLOCAR ENTRE ** DOIS ASTERISCOS DE CADA LADO ** FICA EM NEGRITO
+
+TABELA (APAGAR ISSO E FAZER TABELA COM AS VARIAVEIS EXPLICANDO)
+
+| TITULO DA PRIMEIRA COLUNA | TITULO DA SEGUNDA COLUNA |
+|--------------------------|---------------------------|
+| DADO LINHA 1 COLUNA 1 | DADO LINHA 1 COLUNA 2 |
+*fonte: elaboração própria*
+
+
+Como fazer citação no texto
+=================
+
+segundo @stephanie001algoemrelacaoacitacaoeuquecrio (coloca o @ antes do codigo (id) da referencia ai ele mesmo faz a citação bonitinha)
+
+se fizer a mesma coisa so que entre [ ] fica entre parentesis no texto.
+
+
+
+Methodology
+==============
+
+This paper will use as methodology for data analysis the R software, with which a linear regression will be performed in order to evaluate by country the number of requests for refuge by Syrian citizens. The years to be analyzed are 2011 and 2015, with the aim of analyzing before and after the refugee crisis, after the beginning of the Arab Spring. The objective was to analyze the situation of refugees in a more recent scenario after the onset of the crisis, but because of the lack of data available from more recent years.
+
+For the analysis, two databases will be used, the UNHCR Population Statistics Database, which contains data on asylum and refuge applications for several countries in the world over several years by citizens from different countries. From this database will be taken the variable dependent on the number of asylum requests from Syrians in European countries. In addition to this, the standard Quality of Government (QOG) database for January 2018, the most complete and up-to-date. From this database will be taken the independent variables that characterize the welfare state. Variables with greater data availability were searched for the largest number of countries in the analyzed years. Thus, the variables chosen were Health, equitable education and Public Service. Besides these, the variable of Political rights is used as control because it is an indicator of democracy and of the country's development then it wants to see the effect of public services controlling for this variable of political development of the country. The effect of not including it can be an overestimation of the effect of the other variable.
+
+
+
+Analysis
+=============
+In this paper, an analysis about the number of refuge requests from Syrua in european countries, regarding their level of Welfare, is made. Trying to understand the movement trends of refugees, four variables from the Quality of Government database (QOG Standard - Jan - 2018), and one variable from the United Nations High Commissioner for Refugees (UNHCR Population Statistics - Resettlement) were used in this paper with the object of explaining the most recent refugees movements from Syria to European Countries, trying to understand if the number of refuge requests has some relation with the welfare state level of the countries to which the requests were directed.
+That said, it's important to enlight which were the variables used in the paper. The independent variable "Applied" was extracted from the UNHCR database, which shows the number of refuge requests on each year analyzed, from Syrian citizens for each country on the analysis.
+The dependent variables selected for this paper were extracted from the QOG Basic Database. And these variables were: ffp_ps (using various algorithms, this variable is converted into a score representing the significance of the public  services for each country. The smaller, the better); bs_ee (refers to equitable education and the qualitative indicators reflect the evaluations provided by more than 100 experts responding to the SGI’s survey of the state of affairs in various policy areas throughout the OECD and EU. For these indicators, the rating scale ranges from 1 (worst) to 10 (best); bs_h (refers to the quality of the health system. The qualitative indicators reflect the evaluations provided by more than 100 experts responding to the SGI’s survey of the state of affairs in various policy areas throughout  the OECD and EU. For these indicators, the rating scale ranges from 1 (worst) to 10 (best).); above these, the fh_pr is a variable that refers to political rights, and in this paper is used as a control variable (the specific list of rights considered varies over the years. Countries are graded between 1 (most free) and 7 (least free)). The "fh_pr" variable is used as control because it is an indicator of democracy and of the country's development then wants to see the effect of public services controlling for this variable of political development of the country. The effect of not including it can be an overestimation of the effect of the other variable.
+After the selection of the variables, tests with the logarithmic transformation are made. It's possible to notice that the distribution is almost normal. The log is used once it's assumed that the distribution of the variable has a bias, therefore, one of the extremities has a long tail, and once it's measured as correlation or regression, it can be greatly influenced by peak distribution, outliers, among others. The transformation can reduce the bias effect.
+After the logatithmic transformation, and with the variables ready for the analysis, it is going to be used linear regression models, to process and present the results (summary). The linear regressions were made separately with the objective of not reducing too much the cases since the bs_ee and bs_h variables are present in different countries than the "ffp_ps" and "fh_pr". Then it's decided to set up four linear regression models, one for the political rights and public services variables in 2011, one for these variables in 2015, and one for the equitable education, health and political rights variables in 2011 and other for these variables in 2015. 
+The four models have the objective of explaining in as much detail as possible the motivations that led the Syrian refugees to apply for asylum in the European countries analyzed in the years 2011 and 2015.
+Then it's made a code to produce a table with the regression results. Will be a table in a text type, with the title "Model Results", in an American Journal of Political Science Style, including p-values.
+After that, dispersion graphics indicating the relationship between the variables and add regression line are made.
+An exploratory analysis is also used. After the data results, it's possible to realize that the data is homocedastic since there is no pattern visible in the dispersion of the error.
+When the histogram of the descriptive statistics is made, such as it's summary, it's possible to realize that most of the cases are on the left, near zero, with some outliers.
+This can be proved with the summary at the analysis, where is possible to realize that the 1st. qu and median are on numbers way below the mean and the others quarters. When the log enters on the analysis, it's possible to realize that the differences are smaller and the universe of analysis os smaller as well. With this proof, the variabel is transformed into log.
+After that, a descriptive summary is made for each variable on the model, followed by an histogram. On the Equitable Education summary, it's possible to visualize that the rates maximum are 7.855 out of 10, and most of the cases are between the mean and the maximum, indicating that the equitable education in the analyzed countries are show good rates, above the mean.
+When the Health is the variable analyzed, it's possible to percieve that, just like the Equitable Education summary, this summary shows that most of the cases are also above the mean.
+When Public Services are analyzed, the results show the same tendency as the two prior variables. 
+However, when the Political Rights is the variable analyzed, the tendency is that the cases are concentrated on "1" than on "7", which shows that the analyzed countries are free when the topic referred is political rights.
+
+Then, separate databases are created by year, such as the models used in this paper. 
+The first model has the variables Political Rights and Public Services referred to the number of refuge requests in 2011. The second model has the variables Equitable Education, Health and Political Rights referred to the number of refuge requests in 2011. The third model has the variables Political Rights and Public Services referred to the number of refuge requests in 2015. The fourth model has the variables Equitable Education, Health and Political Rights referred to the number of refuge requests in 2015.
+
+
+``` {r} 
+# ABRIR BLOCO DE CODIGO
+
+```
+
+``` {r open_packages, echo = FALSE, message = FALSE, warning = FALSE}
+
+# Open Packages
+
+if(require(tidyverse) == F) install.packages('tidyverse'); require (tidyverse)
+if(require(readxl) == F) install.packages('readxl'); require (readxl)
+if(require(readr) == F) install.packages('readr'); require (readr)
+if(require(ggplot2) == F) install.packages('ggplot2'); require (ggplot2)
+if(require(stargazer) == F) install.packages('stargazer'); require (stargazer)
+
+```
+
+``` {r open_databases, echo = FALSE, message = FALSE, warning = FALSE} 
+# Open Databases
+
+
+library(readr)
+base <- read_delim("Dados/Dados tratados/dataset-stephanie-preprocess.csv", 
+                                           ";", escape_double = FALSE, trim_ws = TRUE)
+```
+
+``` {r summary_1, echo = FALSE, message = FALSE, warning = FALSE} 
+# Make the summary of the variable in descriptive statistics and the normal histogram showing that most
+# of cases is left, near zero, with some outliers.
+
+results = "hide" para o summary mas nao para o hist - quando for histograma tem q mostrar o resultado pq eh grafico, mas quando for summary oculta pq nao eh para mostrar.
+
+summary(base$Applied)
+
+```
+
+``` {r histo_1, echo = FALSE, message = FALSE, warning = FALSE} 
+# Make the summary of the variable in descriptive statistics and the normal histogram showing that most
+# of cases is left, near zero, with some outliers.
+
+results = "hide" para o summary mas nao para o hist - quando for histograma tem q mostrar o resultado pq eh grafico, mas quando for summary oculta pq nao eh para mostrar.
+
+hist(base$Applied)
+
+```
+
+``` {r summary_2, echo = FALSE, message = FALSE, warning = FALSE} 
+# log analysis
+
+summary(log(base$Applied))
+```
+
+``` {r histo_2, echo = FALSE, message = FALSE, warning = FALSE} 
+# log analysis
+
+hist(log(base$Applied))
+```
+
+``` {r base_log, echo = FALSE, message = FALSE, warning = FALSE} 
+# transformation to log - creation of the variable in log
+
+base$LogApplied <- log(base$Applied)
+base$LogApplied[base$LogApplied == -Inf] <- NA
+```
+
+``` {r summary_variables, echo = FALSE, message = FALSE, warning = FALSE} 
+# descriptive summary of the chosen variables
+
+summary(base$bs_ee)
+summary(base$bs_h)
+summary(base$ffp_ps)
+summary(base$fh_pr)
+```
+
+```{r ggplot_variables, echo = FALSE, message = FALSE, warning = FALSE}
+
+ggplot(data = base, aes(bs_ee)) +
+  geom_histogram()+
+  theme_minimal()
+
+ggplot(data = base, aes(bs_h)) +
+  geom_histogram()+
+  theme_minimal()
+
+ggplot(data = base, aes(ffp_ps)) +
+  geom_histogram()+
+  theme_minimal()
+
+ggplot(data = base, aes(fh_pr)) +
+  geom_histogram()+
+  theme_minimal()
+
+ggplot(data = base, aes(LogApplied)) +
+  geom_histogram()+
+  theme_minimal()
+```
+
+``` {r base_years, echo = FALSE, message = FALSE, warning = FALSE} 
+# Creating separate databases by year
+
+base2011 <- filter(base, year == 2011)
+base2015 <- filter(base, year == 2015)
+```
+
+```{r base_correlation, echo = FALSE, message = FALSE, warning = FALSE}
+# Creating a correlation between the LogApplied and bs_h using pairwise
+
+cor(base$bs_h, base$LogApplied, use = "p")
+
+```
+
+```{r model_1, echo = FALSE, message = FALSE, warning = FALSE}
+model1 <- lm(LogApplied ~ ffp_ps + fh_pr, data = base2011)
+model2 <- lm(LogApplied ~ bs_ee + bs_h + fh_pr, data = base2011)
+model3 <- lm(LogApplied ~ ffp_ps + fh_pr, data = base2015)
+model4 <- lm(LogApplied ~ bs_ee + bs_h + fh_pr, data = base2015)
+```
+
+```{r summary_3, echo = FALSE, message = FALSE, warning = FALSE}
+summary(model1)
+summary(model2)
+summary(model3)
+summary(model4)
+```
+
+```{r stargazer, echo = FALSE, message = FALSE, warning = FALSE}
+stargazer(model1, model2, model3, model4,
+  type = "text",
+  title = "Model Results",
+  style = "ajps",
+  p.auto = FALSE)
+```
+
+```{r model_1_1, echo = FALSE, message = FALSE, warning = FALSE}
+# model1
+ggplot(base2011, aes(x = ffp_ps, y = LogApplied)) + geom_point() + 
+  labs( x ="Public Services", y = "Number of refuge requests") +
+  geom_smooth(method="lm", se = F) +
+  theme_minimal()
+```
+
+```{r model_1_2, echo = FALSE, message = FALSE, warning = FALSE}
+# model2
+ggplot(base2011, aes(x = bs_ee + bs_h, y = LogApplied)) + geom_point() +
+  labs( x ="Health and Equitable Education", y = "Number of refuge requests") +
+  geom_smooth(method="lm", se = F) +
+  theme_minimal()
+```
+
+```{r model_1_3, echo = FALSE, message = FALSE, warning = FALSE}
+# model 3
+ggplot(base2015, aes(x = ffp_ps, y = LogApplied)) + geom_point() + 
+  labs( x ="Public Services", y = "Number of refuge requests") +
+  geom_smooth(method="lm", se = F) +
+  theme_minimal()
+```
+
+```{r model_1_4, echo = FALSE, message = FALSE, warning = FALSE}
+# model 4
+ggplot(base2015, aes(x = bs_ee + bs_h, y = LogApplied)) + geom_point() + 
+  labs( x ="Health and Equitable Education", y = "Number of refuge requests") +
+  geom_smooth(method="lm", se = F) +
+  theme_minimal()
+```
+
+```{r ggplot_model_1, echo = FALSE, message = FALSE, warning = FALSE}
+ggplot(data = model1, aes(x = fitted(model1), y=residuals(model1))) +
+  geom_point() + 
+  labs( x ="fitted (model1)", y = "residuals(model1)") +
+  geom_hline (yintercept = 0, linetype = "dashed", color = "blue") +
+  theme_minimal()
+```
+
+```{r ggplot_model_2, echo = FALSE, message = FALSE, warning = FALSE}
+ggplot(data = model2, aes(x = fitted(model2), y=residuals(model2))) +
+  geom_point() + 
+  labs( x ="fitted (model2)", y = "residuals(model2)") +
+  geom_hline (yintercept = 0, linetype = "dashed", color = "blue") +
+  theme_minimal()
+```
+
+```{r ggplot_model_3, echo = FALSE, message = FALSE, warning = FALSE}
+ggplot(data = model3, aes(x = fitted(model3), y=residuals(model3))) +
+  geom_point() + 
+  labs( x ="fitted (model3)", y = "residuals(model3)") +
+  geom_hline (yintercept = 0, linetype = "dashed", color = "blue") +
+  theme_minimal()
+```
+
+```{r ggplot_model_4, echo = FALSE, message = FALSE, warning = FALSE} 
+
+ggplot(data = model4, aes(x = fitted(model4), y=residuals(model4))) +
+  geom_point() + 
+  labs( x ="fitted (model4)", y = "residuals(model4)") +
+  geom_hline (yintercept = 0, linetype = "dashed", color = "blue") +
+  theme_minimal() 
+```
+
+**** onde nao for precisar mostrar o resultado de nada coloca:  echo = FALSE, message = FALSE, warning = FALSE, results = 'hide'
+
+References {#references .unnumbered}
+==========
