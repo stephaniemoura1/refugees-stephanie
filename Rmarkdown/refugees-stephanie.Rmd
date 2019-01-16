@@ -10,16 +10,12 @@ address:
   - code: Universidade Federal de Pernambuco - UFPE
     address: Av. Prof. Moraes Rego, 1235 - Cidade Universitária, Recife - PE, 50670-901
 
-RESUMO (APAGAR ISSO)
 abstract: | 
   Fazer o resumo **********
   This is the abstract.
 
   It consists of two paragraphs.
 
-
-
- REFEDERENCIAS (APAGAR ISSO)
 journal: ""
 date: "`r Sys.Date()`"
 references: 
@@ -144,15 +140,13 @@ if(require(stargazer) == F) install.packages('stargazer'); require (stargazer)
 
 
 library(readr)
-base <- read_delim("Dados/Dados tratados/dataset-stephanie-preprocess.csv", 
+base <- read_delim("dataset-stephanie-preprocess.csv", 
                                            ";", escape_double = FALSE, trim_ws = TRUE)
 ```
 
-``` {r summary_1, echo = FALSE, message = FALSE, warning = FALSE} 
+``` {r summary_1, echo = FALSE, message = FALSE, warning = FALSE, results = "hide"} 
 # Make the summary of the variable in descriptive statistics and the normal histogram showing that most
 # of cases is left, near zero, with some outliers.
-
-results = "hide" para o summary mas nao para o hist - quando for histograma tem q mostrar o resultado pq eh grafico, mas quando for summary oculta pq nao eh para mostrar.
 
 summary(base$Applied)
 
@@ -162,7 +156,7 @@ summary(base$Applied)
 # Make the summary of the variable in descriptive statistics and the normal histogram showing that most
 # of cases is left, near zero, with some outliers.
 
-results = "hide" para o summary mas nao para o hist - quando for histograma tem q mostrar o resultado pq eh grafico, mas quando for summary oculta pq nao eh para mostrar.
+# results = "hide" para o summary mas nao para o hist - quando for histograma tem q mostrar o resultado pq eh grafico, mas quando for summary oculta pq nao eh para mostrar.
 
 hist(base$Applied)
 
