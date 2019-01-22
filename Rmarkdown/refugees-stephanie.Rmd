@@ -35,11 +35,7 @@ references:
     issued:
       year: 2018
       month: 6
-
-      
       journal: "Carta Maior"
-# date: "`r Sys.Date()`"
-references: 
   - id: leneide
     title: Imigração e refugiados na Europa - O desafio do século
     author: 
@@ -56,10 +52,7 @@ references:
     issued:
       year: 2015
       month: 8
-                   
       journal: "European Journal of Sociology"
-# date: "`r Sys.Date()`"
-references: 
   - id: briggs
     title: The Welfare State in Historical Perspective
     author: 
@@ -76,10 +69,7 @@ references:
     issued: 
       year: 1961
       month: 12
-      
       journal: "Book"
-# date: "`r Sys.Date()`"
-references: 
   - id: marshall
     title: Citizenship and Social Class
     author: 
