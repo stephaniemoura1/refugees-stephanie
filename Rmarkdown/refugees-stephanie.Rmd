@@ -8,13 +8,12 @@ author:
 
 address:
   - code: Universidade Federal de Pernambuco - UFPE
-    address: Av. Prof. Moraes Rego, 1235 - Cidade Universitária, Recife - PE, 50670-901
+    address: Universidade Federal de Pernambuco
     
 abstract: | 
   Over the past years, the civil war in Syria, and all the danger that accompanies it, caused a great number of nationals of that country to leave their homes and their nation with the main objective of surviving the attacks suffered daily in the country.
   The Syrian refugees are crossing european borders for the past years and this is causing a malaise between the war refugees and the nationals of the countries that receive them. In this paper, we will evaluate whether the welfare state and quality of life indexes of European countries have been attractive for Syrian nationals who have left their country to spend time or establish their permanent residence, or if only the prospect of having a peaceful space and safe to live for a period of time and then return to their country of origin is sufficient.
   In this paper we analyze the intentions of the refugees when seeking an asylum and the connexion between variables that express quality of life and the entry and asylum of syrian refugees on 2011 and 2015, years that represent the biggest influxes of syrians in Europe, after the Arab Spring and during the war.
-
 
 journal: "European Commission Press Release Database"
 date: "`r Sys.Date()`"
@@ -31,7 +30,7 @@ references:
     issue:
     publisher: European Commission
     page: 
-    type: Speech
+    type: article-journal
     issued:
       year: 2018
       month: 6
@@ -48,7 +47,7 @@ references:
     issue:
     publisher: 
     page: 
-    type: Editorial
+    type: article-journal
     issued:
       year: 2015
       month: 8
@@ -65,7 +64,7 @@ references:
     issue: 2
     publisher: Archives Européennes de Sociologie
     page: 221-258
-    type: Article
+    type: article-journal
     issued: 
       year: 1961
       month: 12
@@ -82,7 +81,7 @@ references:
     issue: 
     publisher: Pluto Press
     page: 
-    type: Book
+    type: article-journal
     issued: 
       year: 1992
       month: 
@@ -90,7 +89,6 @@ references:
 output: rticles::elsevier_article
 ---
 
-_Text based on elsarticle sample manuscript, see [http://www.elsevier.com/author-schemas/latex-instructions#elsarticle](http://www.elsevier.com/author-schemas/latex-instructions#elsarticle)_
 
 ```{r open_packages, echo = FALSE, message = FALSE, warning = FALSE}
 
@@ -110,7 +108,7 @@ if(require(car) == F) install.packages('car'); require (car)
 
 
 library(readr)
-base <- read_delim("~/Desktop/refugees-stephanie/Dados/Dados tratados/dataset-stephanie-preprocess.csv", 
+base <- read_delim("dataset-stephanie-preprocess.csv", 
                                          ";", escape_double = FALSE, trim_ws = TRUE)
 ```
 
@@ -152,19 +150,18 @@ Operationalizing the Variables
 
 The research question that we try to answer is: 
 
-** Countries with higher rates of Welfare State lead to more syrian asylum applications? **
+**Countries with higher rates of Welfare State lead to more syrian asylum applications?**
 
 In this paper, an analysis about the number of refuge requests from Syria in european countries, regarding their level of Welfare, is made. Trying to understand the movement trends of refugees, four variables from the Quality of Government database (QOG Standard - Jan - 2018), and one variable from the United Nations High Commissioner for Refugees (UNHCR Population Statistics - Resettlement) were used in this paper with the object of explaining the most recent refugees movements from Syria to European Countries, trying to understand if the number of refuge requests has some relation with the welfare state level of the countries to which the requests were directed.
 
-That said, it's important to enlight which were the variables used in the paper. 
+That said, it's important to enlight which were the variables used in the paper. The independent variables selected for this paper were extracted from the QOG Basic Database. And these variables were: 
 
-The independent variables selected for this paper were extracted from the QOG Basic Database. And these variables were: 
   - **ffp_ps** (using various algorithms, this variable is converted into a score representing the significance of the public  services for each country. The smaller, the better); 
   - **bs_ee** (refers to equitable education and the qualitative indicators reflect the evaluations provided by more than 100 experts responding to the SGI’s survey of the state of affairs in various policy areas throughout the OECD and EU. For these indicators, the rating scale ranges from 1 (worst) to 10 (best); 
   - **bs_h** (refers to the quality of the health system. The qualitative indicators reflect the evaluations provided by more than 100 experts responding to the SGI’s survey of the state of affairs in various policy areas throughout  the OECD and EU. For these indicators, the rating scale ranges from 1 (worst) to 10 (best).); 
     - above these, the **fh_pr** is a variable that refers to political rights, and in this paper is used as a control variable (the specific list of rights considered varies over the years. Countries are graded between 1 (most free) and 7 (least free)). The **fh_pr** variable is used as control because it is an indicator of democracy and of the country's development then wants to see the effect of public services controlling for this variable of political development of the country. The effect of not including it can be an overestimation of the effect of the other variable.
     
-```{r summary_variables, echo = FALSE, message = FALSE, warning = FALSE} 
+```{r summary_variables, echo = FALSE, message = FALSE, warning = FALSE, results='hide'} 
 # descriptive summary of the chosen variables
 
 summary(base$bs_ee)
@@ -173,34 +170,56 @@ summary(base$ffp_ps)
 summary(base$fh_pr)
 ```
 
-```{r ggplot_variables, echo = FALSE, message = FALSE, warning = FALSE}
+```{r ggplot_variables1, echo = FALSE, message = FALSE, warning = FALSE}
 
 ggplot(data = base, aes(bs_ee)) +
   geom_histogram()+
-  theme_minimal()
-
-ggplot(data = base, aes(bs_h)) +
-  geom_histogram()+
-  theme_minimal()
-
-ggplot(data = base, aes(ffp_ps)) +
-  geom_histogram()+
-  theme_minimal()
-
-ggplot(data = base, aes(fh_pr)) +
-  geom_histogram()+
-  theme_minimal()
+  labs(title = "Histogram bs_ee")+
+  theme_minimal()+
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
-The dependent variable "Applied" was extracted from the UNHCR database, which shows the number of refuge requests on each year analyzed, from Syrian citizens for each country on the analysis. The descriptive statistics of the independent variable "Applied" will then be presented. The "Applied" variable presented a mean of `r mean(base$Applied)` and standard deviation `r sd(base$Applied)`.
+</br>
+
+```{r ggplot_variables2, echo = FALSE, message = FALSE, warning = FALSE}
+ggplot(data = base, aes(bs_h)) +
+  geom_histogram()+
+  labs(title = "Histogram bs_h")+
+  theme_minimal()+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+</br>
+
+```{r ggplot_variables3, echo = FALSE, message = FALSE, warning = FALSE}
+ggplot(data = base, aes(ffp_ps)) +
+  geom_histogram()+
+  labs(title = "Histogram ffp_ps")+
+  theme_minimal()+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+</br>
+
+```{r ggplot_variables4, echo = FALSE, message = FALSE, warning = FALSE}
+ggplot(data = base, aes(fh_pr)) +
+  geom_histogram()+
+  labs(title = "Histogram fh_pr")+
+  theme_minimal()+
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
 
 ```{r summary_1, echo = FALSE, message = FALSE, warning = FALSE} 
 # Make the summary of the variable in descriptive statistics and the normal histogram showing that most
 # of cases is left, near zero, with some outliers.
 
-summary(base$Applied)
+m1 <- mean(base$Applied)
 
 ```
+
+The dependent variable "Applied" was extracted from the UNHCR database, which shows the number of refuge requests on each year analyzed, from Syrian citizens for each country on the analysis. The descriptive statistics of the independent variable "Applied" will then be presented. The "Applied" variable presented a mean of ``r m1`.
+
 
 ```{r histo_1, echo = FALSE, message = FALSE, warning = FALSE} 
 # Make the summary of the variable in descriptive statistics and the normal histogram showing that most
@@ -213,9 +232,8 @@ hist(base$Applied)
 After the selection of the variables, tests with the logarithmic transformation are made. It's possible to notice that the distribution is almost normal. The log is used once it's assumed that the distribution of the variable has a bias, therefore, one of the extremities has a long tail, and once it's measured as correlation or regression, it can be greatly influenced by peak distribution, outliers, among others. The transformation can reduce the bias effect.
 After the logatithmic transformation, and with the variables ready for the analysis, it is going to be used linear regression models, to process and present the results (summary). The linear regressions were made separately with the objective of not reducing too much the cases since the bs_ee and bs_h variables are present in different countries than the "ffp_ps" and "fh_pr". Then it's decided to set up four linear regression models, one for the political rights and public services variables in 2011, one for these variables in 2015, and one for the equitable education, health and political rights variables in 2011 and other for these variables in 2015.
 
-```{r summary_2, echo = FALSE, message = FALSE, warning = FALSE} 
+```{r summary_2, echo = FALSE, message = FALSE, results='hide',warning = FALSE} 
 # log analysis
-
 summary(log(base$Applied))
 ```
 
@@ -249,7 +267,7 @@ base2015 <- filter(base, year == 2015)
 
 First we check the association, in a scatter plot, between the variables "Health" and "Applied". The correlation result between the variables was low, 0.27, and positive, indicating that the association between the variables is imprecise but that to some extent, when one variable increases, the other decreases, being proportional.
 
-```{r base_correlation, echo = FALSE, message = FALSE, warning = FALSE}
+```{r base_correlation, echo = FALSE, message = FALSE, warning = FALSE, results='hide'}
 # Creating a correlation between the LogApplied and bs_h using pairwise
 
 cor(base$bs_h, base$LogApplied, use = "p")
@@ -263,9 +281,10 @@ Concerning the graphic that associates the variables "number of refuge requests"
 ```{r model_1_1, echo = FALSE, message = FALSE, warning = FALSE}
 # model1
 ggplot(base2011, aes(x = ffp_ps, y = LogApplied)) + geom_point() + 
-  labs( x ="Public Services", y = "Number of refuge requests") +
+  labs(title = "Scatter-plot Public Services X Number of refuge requests", x ="Public Services", y = "Number of refuge requests") +
   geom_smooth(method="lm", se = F) +
-  theme_minimal()
+  theme_minimal()+
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
 Concerning the graph that associates the variables "number of refuge requests" and "Health and equitable education", we can see that as the Health and Equitable education index increases, the number of refugee requests increases, in 2011.
@@ -273,9 +292,10 @@ Concerning the graph that associates the variables "number of refuge requests" a
 ```{r model_1_2, echo = FALSE, message = FALSE, warning = FALSE}
 # model2
 ggplot(base2011, aes(x = bs_ee + bs_h, y = LogApplied)) + geom_point() +
-  labs( x ="Health and Equitable Education", y = "Number of refuge requests") +
+  labs(title="Scatter-plot Health and Equitable Education X Number of refuge requests", x ="Health and Equitable Education", y = "Number of refuge requests") +
   geom_smooth(method="lm", se = F) +
-  theme_minimal()
+  theme_minimal()+
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
 Concerning the graphic that associates the variables "number of refuge requests" and "public services", we can see that as public services increase, the number of requests for refuge decreases, in 2015, following the same pattern as the 2011's results. 
@@ -284,9 +304,10 @@ Concerning the graphic that associates the variables "number of refuge requests"
 ```{r model_1_3, echo = FALSE, message = FALSE, warning = FALSE}
 # model 3
 ggplot(base2015, aes(x = ffp_ps, y = LogApplied)) + geom_point() + 
-  labs( x ="Public Services", y = "Number of refuge requests") +
+  labs(title="Scatter-plot Public Services X Number of refuge requests", x ="Public Services", y = "Number of refuge requests") +
   geom_smooth(method="lm", se = F) +
-  theme_minimal()
+  theme_minimal()+
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
 Concerning the graph that associates the variables "number of refuge requests" and "Health and equitable education", we can see that as the Health and Equitable education index increases, the number of refugee requests increases, in 2015, following the same pattern of results of 2011. 
@@ -295,23 +316,25 @@ Concerning the graph that associates the variables "number of refuge requests" a
 ```{r model_1_4, echo = FALSE, message = FALSE, warning = FALSE}
 # model 4
 ggplot(base2015, aes(x = bs_ee + bs_h, y = LogApplied)) + geom_point() + 
-  labs( x ="Health and Equitable Education", y = "Number of refuge requests") +
+  labs(title="Scatter-plot Health and Equitable Education X Number of refuge requests", x ="Health and Equitable Education", y = "Number of refuge requests") +
   geom_smooth(method="lm", se = F) +
-  theme_minimal()
+  theme_minimal()+
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
 In association graphs, we can not find nonlinear relationships. Therefore, we will carry out the analyzes without including polynomials in the models.
 
 
 Variable's description table
-# | Variable code | Variable name | 
-# |---------------|---------------|
-# | Applied | Number of refuge requests | 
-# | ffp_ps | Public Services | 
-# | bs_ee | Equitable Education | 
-# | bs_h | Health | 
-# | fh_pr | Political Rights | 
-# *source: own elaboration* 
+
+ | Variable code | Variable name | 
+ |---------------|---------------|
+ | Applied | Number of refuge requests | 
+ | ffp_ps | Public Services | 
+ | bs_ee | Equitable Education | 
+ | bs_h | Health | 
+ | fh_pr | Political Rights | 
+ *source: own elaboration* 
 
 
 Results
@@ -329,17 +352,15 @@ model4 <- lm(LogApplied ~ bs_ee + bs_h + fh_pr, data = base2015)
 Regarding the first model, which refers to the year 2011, with the dependent variable LogApplied, the independent Public Services and the control variable Political Rights.
 The variable Public Services had a negative effect on the application of requests for refugees from Syrians in the countries analyzed. The p-value was very close to the 5% threshold. The control variable Political Rights did not present statistical significance in the model. The r2 of the model presented a median magnitude, since it revealed a prediction capacity of 10% of the variance of the dependent variable.
 
-```{r summary_3.1, echo = FALSE, message = FALSE, warning = FALSE}
-summary(model1)
-
+```{r summary_3.1, echo = FALSE, message = FALSE, warning = FALSE, results='asis'}
+stargazer::stargazer(model1, type = "latex", title = "Resultados do Modelo 1", p.auto=FALSE, header = FALSE, style = "apsr", no.space=TRUE)
 ```
 
 As for the second model, which refers to the year 2011, with the dependent variable LogApplied, and the independent Equitable Education and Health, in addition to the control variable, Political Rights,
 it is noteworthy that in this model 2, none of the variables had a significant effect. This is also reflected in the r2 of the model, which is close to zero.
 
-```{r summary_3.2, echo = FALSE, message = FALSE, warning = FALSE}
-
-summary(model2)
+```{r summary_3.2, echo = FALSE, message = FALSE, warning = FALSE, results='asis'}
+stargazer::stargazer(model2, type = "latex", title = "Resultados do Modelo 2", p.auto=FALSE, header = FALSE, style = "apsr",  no.space=TRUE)
 ```
 
 The third model refers to the year 2015, with the dependent variable LogApplied, and the independent Public Services, in addition to the control variable, Political Rights.
@@ -347,30 +368,30 @@ It is notable that in this model 3,
 the variable Public Services presented a negative and significant effect and the variable Political Rights did not present statistical significance.
 Compared with model 1, which includes the same variables, but for the year 2011, the variable Public Services had its negative effect accentuated, and the r2 of the model became more expressive.
 
-```{r summary_3.3, echo = FALSE, message = FALSE, warning = FALSE}
+```{r summary_3.3, echo = FALSE, message = FALSE, warning = FALSE, results='asis'}
 
-summary(model3)
-
+stargazer::stargazer(model3, type = "latex", title = "Model 3",  style = "apsr", no.space=TRUE, p.auto=FALSE, header = FALSE)
 ```
 
 The fourth model is the one that presented the greatest explanatory capacity of the variance of the dependent variable.
 It concerns the year 2015, with the dependent variable LogApplied, and the independent variables Equitable Education and Health, in addition to the control variable, Political Rights.
 In the fourth model, the independent variable Health and the control variable Political Rights presented positive and significant effects. The variable Equitable Education did not present statistical significance.
 
-```{r summary_3.4, echo = FALSE, message = FALSE, warning = FALSE}
+```{r summary_3.4, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
 
-summary(model4)
+stargazer::stargazer(model2, type="latex",title = "Model 4", p.auto=FALSE,  style = "apsr", no.space=TRUE, header = FALSE, ci=FALSE )
+
 ```
 
-A summary of the four models analyzed is presented below. From it it is possible to see significant fluctuations in the effect of the variable Equitable Education; a relation that suggests that the control variable Political Rights has greater effect on the dependent variable, in models with greater number of variables.
+A summary of the four models analyzed is presented below. From it it is possible to see significant fluctuations in the effect of the variable Equitable Education; a relation that suggests that the control variable Political Rights has greater effect on th
 
-```{r stargazer, echo = FALSE, message = FALSE, warning = FALSE}
-stargazer(model1, model2, model3, model4,
-  type = "text",
-  title = "Model Results",
-  style = "ajps",
-  p.auto = FALSE)
+```{r stargazer, echo = FALSE, message = FALSE, warning = FALSE, results='asis'}
+stargazer(model1, model2, type = "latex", title = "Models Results", style = "apsr", no.space=TRUE, header = FALSE,  p.auto=FALSE, column.labels = c("Model 1", "Model 2"),  model.numbers = FALSE)
+
+stargazer(model3, model4, type = "latex", title = "Models Results", style = "apsr", no.space=TRUE, header = FALSE, p.auto=FALSE, column.labels = c("Model 3", "Model 4"),  model.numbers = FALSE)
+
 ```
+
 
 Assumptions
 ====================
@@ -417,7 +438,7 @@ hist(residuals(model4),
 ```{r ggplot_model_1, echo = FALSE, message = FALSE, warning = FALSE}
 ggplot(data = model1, aes(x = fitted(model1), y=residuals(model1))) +
   geom_point() + 
-  labs( x ="fitted (model1)", y = "residuals(model1)") +
+  labs(title="Heteroscedasticity Model 1", x ="fitted (model1)", y = "residuals(model1)") +
   geom_hline (yintercept = 0, linetype = "dashed", color = "blue") +
   theme_minimal()
 ```
@@ -425,7 +446,7 @@ ggplot(data = model1, aes(x = fitted(model1), y=residuals(model1))) +
 ```{r ggplot_model_2, echo = FALSE, message = FALSE, warning = FALSE}
 ggplot(data = model2, aes(x = fitted(model2), y=residuals(model2))) +
   geom_point() + 
-  labs( x ="fitted (model2)", y = "residuals(model2)") +
+  labs(title="Heteroscedasticity Model 2", x ="fitted (model2)", y = "residuals(model2)") +
   geom_hline (yintercept = 0, linetype = "dashed", color = "blue") +
   theme_minimal()
 ```
@@ -433,7 +454,7 @@ ggplot(data = model2, aes(x = fitted(model2), y=residuals(model2))) +
 ```{r ggplot_model_3, echo = FALSE, message = FALSE, warning = FALSE}
 ggplot(data = model3, aes(x = fitted(model3), y=residuals(model3))) +
   geom_point() + 
-  labs( x ="fitted (model3)", y = "residuals(model3)") +
+  labs(title="Heteroscedasticity Model 3", x ="fitted (model3)", y = "residuals(model3)") +
   geom_hline (yintercept = 0, linetype = "dashed", color = "blue") +
   theme_minimal()
 ```
@@ -442,7 +463,7 @@ ggplot(data = model3, aes(x = fitted(model3), y=residuals(model3))) +
 
 ggplot(data = model4, aes(x = fitted(model4), y=residuals(model4))) +
   geom_point() + 
-  labs( x ="fitted (model4)", y = "residuals(model4)") +
+  labs(title="Heteroscedasticity Model 4", x ="fitted (model4)", y = "residuals(model4)") +
   geom_hline (yintercept = 0, linetype = "dashed", color = "blue") +
   theme_minimal() 
 ```
