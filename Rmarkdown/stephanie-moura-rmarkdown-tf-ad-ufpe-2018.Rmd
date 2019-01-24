@@ -11,8 +11,8 @@ address:
     address: Universidade Federal de Pernambuco
     
 abstract: | 
-  Over the past years, the civil war in Syria, and all the danger that accompanies it, caused a great number of nationals of that country to leave their homes and their nation with the main objective of surviving the attacks suffered daily in the country.
-  The Syrian refugees are crossing european borders for the past years and this is causing a malaise between the war refugees and the nationals of the countries that receive them. In this paper, we will evaluate whether the welfare state and quality of life indexes of European countries have been attractive for Syrian nationals who have left their country to spend time or establish their permanent residence, or if only the prospect of having a peaceful space and safe to live for a period of time and then return to their country of origin is sufficient.
+  Over the past years, the civil war in Syria and all the danger that accompanies it, caused a great number of syrian nationals to leave their homes and their nation with the main objective of surviving the attacks suffered daily in the country.
+  The Syrian refugees are crossing european borders for the past years and this is causing a malaise between the war refugees and nationals of the countries that receive them. In this paper, we will evaluate whether the welfare state and quality of life indexes of European countries have been attractive enough for Syrian nationals who have left their country to spend time or establish their permanent residence, or if only the prospect of having a peaceful space and safe to live for a period of time and then return to their country of origin is enough.
   In this paper we analyze the intentions of the refugees when seeking an asylum and the connexion between variables that express quality of life and the entry and asylum of syrian refugees on 2011 and 2015, years that represent the biggest influxes of syrians in Europe, after the Arab Spring and during the war.
 
 journal: "European Commission Press Release Database"
@@ -85,6 +85,54 @@ references:
     issued: 
       year: 1992
       month: 
+       journal: "The Quality of Government Institute"
+  - id: qog
+    title: The Quality of Government Standard Dataset, version Jan18. 
+    author: 
+      - family: Teorell
+        given: Jan
+     author: 
+      - family: Dahlberg
+        given: Stefan
+      author: 
+      - family: Holmberg
+        given: Sören    
+      author: 
+      - family: Rothstein
+        given: Bo     
+      author: 
+      - family: Pachon
+        given: Natalia
+      author: 
+      - family: Svensson
+        given: Richard
+    container title: 
+    volume: 
+    URL: http://www.qog.pol.gu.se 
+    DOI: doi:10.18157/QoGStdJan18
+    issue: 
+    publisher: University of Gothenburg: The Quality of Government Institute
+    page: 
+    type: database
+    issued: 
+      year: 2018
+      month: 1
+       journal: "UNHCR"
+  - id: briggs
+    title: Resettlement population statistics
+    author: 
+      - family: UNHCR
+        given: 
+    container title: 
+    volume: 
+    URL: http://popstats.unhcr.org/en/resettlement
+    DOI: 
+    issue: 
+    publisher: UNHCR Population Statistics Database
+    page: 
+    type: database
+    issued: 
+      year: 2017
   
 output: rticles::elsevier_article
 ---
@@ -119,19 +167,19 @@ Countries with higher rates of Welfare State lead to more syrian asylum applicat
 
 The country whose internal conflict has caused more nationals to leave its territory was Syria, since after the start of the Arab Spring in 2010 and a series of popular protests in the country, that progressed to a violent armed revolt, influenced by other protests in the Arab world. 
 
-The conflict shows itself in two fronts: one compound by oppositors of the President Bashar Al-Assad, that claim to be struggling to oust his power and then later install a more democratic leadership in the country; and the other composed by the Assad and its government, who claims to be only fighting armed terrorists aimed at destabilizing the country. Over the years, this war with an initial political cause, turned itself into a "power struggle", also embracing aspects, with sectarian and religious nature, and many factions emerged fighting against each other and the government. 
+The conflict shows itself in two fronts: one compound by oppositors of the President Bashar Al-Assad, that claims to be struggling to oust his power and then later install a more democratic leadership in the country; and the other composed by Assad and its government, who claims to be only fighting armed terrorists who aim to destabilize the country. Over the years, this war with an initial political cause, turned itself into a "power struggle", also embracing aspects with sectarian and religious natures, that lead to the emergence of many factions that now fight against each other and the government. 
 
-In the middle of this conflict, many civilians found themselves in the middle of bombings and more than five million Syrians would have sought refuge abroad to escape the fighting, most of them seeking refuge abroad. The conflict generated a huge migratory wave of Syrians and Arabs towards Europe. It is the largest migratory wave and consequent humanitarian crisis faced by Europe since World War II. According to the Vice-President of the European Commission, Frans Timmermans, it is a "world crisis that needs a European answer" @franstimmermans.
+In the middle of this conflict, many civilians found themselves in the middle of bombings, and more than five million Syrians would have tried to escape the fighting, most of them seeking refuge abroad. The conflict generated a huge migratory wave of Syrians and Arabs towards Europe. It is the largest migratory wave and consequent humanitarian crisis faced by Europe since World War II. According to the Vice-President of the European Commission, Frans Timmermans, it is a "world crisis that needs an European answer" [@franstimmermans].
 
-This migratory flow reached critical levels throughout 2015, with an exponential increase (hundreds of thousands of people) trying to enter Europe and applying for asylum, fleeing their countries due to wars, conflicts, hunger, religious intolerance, terrible climate change, human rights violations, hopelessness and others, and adding to all this, a massive action of intimidation, violence and oppression carried out by groups that control illegal trafficking and exploit these totally vulnerable migrants @leneide.
+This migratory flow reached critical levels throughout 2015, with an exponential increase (hundreds of thousands of people) trying to enter Europe and applying for asylum. These people flew away of their countries due to wars, conflicts, hunger, religious intolerance, terrible climate change, human rights violations, hopelessness and others, and adding to all this, a massive action of intimidation, violence and oppression carried out by groups that control illegal trafficking exploited these totally vulnerable migrants [@leneide].
 
 But why did so many migrants seek Europe to take refuge instead of seeking asylum in other Middle Eastern or Asian countries closer to their country of origin? The answer to this can maybe be found on a definition of Welfare State:
  “A welfare state is a state in which organized power is deliberately used (through politics and administration) in an effort to modify the play of the market forces in at least three directions
-- first, by guaranteeing individuals and families a 	minimum income irrespective of the market value of their work or their property;
+- first, by guaranteeing individuals and families a	minimum income irrespective of the market value of their work or their property;
 - second, by narrowing the extent of insecurity by 	enabling individuals and families to meet certain “social contingencies” (for example, sickness, old age and unemployment) which lead otherwise to individual and family crisis; and
-- third, by ensuring that all citizens without distinction of status or class are offered the best standards available in relation to a certain agreed range of social services.” @briggs
+- third, by ensuring that all citizens without distinction of status or class are offered the best standards available in relation to a certain agreed range of social services.” [@briggs]
 
-The sociologist T. H. Marshall  described the modern welfare state as a distinctive combination of democracy, welfare and capitalism. As a type of mixed economy, the welfare state funds the governmental institutions for healthcare and education along with direct benefits paid to individual citizens. Modern welfare states include Germany and France, Belgium and the Netherlands, as well as the Nordic countries, which employ a system known as the Nordic Model. The various implementations of the welfare state fall into three categories: (i) social democratic, (ii) conservative, and (iii) liberal. [@marshall]
+The sociologist T. H. Marshall  described the modern welfare state as a distinctive combination of democracy, welfare and capitalism. As a type of mixed economy, the welfare state funds the governmental institutions for healthcare and education along with direct benefits paid to individual citizens. Modern welfare states include Germany, France, Belgium and the Netherlands, as well as the Nordic countries, which employ a system known as the Nordic Model. The various implementations of the welfare state fall into three categories: (i) social democratic, (ii) conservative, and (iii) liberal. [@marshall]
 
 That said, this paper tries to enlight if countries with a higher Welfare State attract more requests for refuge, these being preferred by refugees from Syria. This analysis is important to help the understanding of the movement trends of refugees if they are looking for countries with a higher quality of life or just a country where they can allocate themselves to escape the conflicts. This may also lead to explanations about the preference of refugees to remain in the place of refuge after the conflict ends or to return to their homeland.
 
@@ -142,21 +190,22 @@ Methodology
 
 This paper will use as methodology for data analysis the R software, with which a linear regression will be performed in order to evaluate by country the number of requests for refuge by Syrian citizens. The years to be analyzed are 2011 and 2015, with the aim of analyzing before and after the refugee crisis, after the beginning of the Arab Spring. The objective was to analyze the situation of refugees in a more recent scenario after the onset of the crisis, but because of the lack of data available from more recent years.
 
-For the analysis, two databases will be used, the UNHCR Population Statistics Database, which contains data on asylum and refuge applications for several countries in the world over several years by citizens from different countries. From this database will be taken the variable dependent on the number of asylum requests from Syrians in European countries. In addition to this, the standard Quality of Government (QOG) database for January 2018, the most complete and up-to-date. From this database will be taken the independent variables that characterize the welfare state. Variables with greater data availability were searched for the largest number of countries in the analyzed years. Thus, the variables chosen were Health, Equitable Education and Public Service. Besides these, the variable of Political Rights is used as control because it is an indicator of democracy and of the country's development then it wants to see the effect of public services controlling for this variable of political development of the country. The effect of not including it can be an overestimation of the effect of the other variable.
-
+For the analysis, two databases will be used, the UNHCR Population Statistics Database, which contains data on asylum and refuge applications for several countries in the world over several years by citizens from different countries. From this database will be taken the dependent variable on the number of asylum requests from Syrians in European countries, the "Applied" variable. In addition to this, the Quality of Government (QOG) standard database of January 2018 will be used, the most complete and up-to-date of QoG's databases. From this database will be taken the independent variables that characterize the welfare state. Variables with greater data availability were searched for the largest number of countries in the analyzed years. Thus, the variables chosen were "Health", "Equitable Education" and "Public Service". Besides these, the variable "Political Rights" is used as control because it is an indicator of democracy and of the country's development then it wants to see the effect of public services controlling for this variable of political development of the country. The effect of not including it can be an overestimation of the effect of the other variable.
 
 Operationalizing the Variables
 =============
 
 The research question that we try to answer is: 
 
+
 **Countries with higher rates of Welfare State lead to more syrian asylum applications?**
 
-In this paper, an analysis about the number of refuge requests from Syria in european countries, regarding their level of Welfare, is made. Trying to understand the movement trends of refugees, four variables from the Quality of Government database (QOG Standard - Jan - 2018), and one variable from the United Nations High Commissioner for Refugees (UNHCR Population Statistics - Resettlement) were used in this paper with the object of explaining the most recent refugees movements from Syria to European Countries, trying to understand if the number of refuge requests has some relation with the welfare state level of the countries to which the requests were directed.
+
+In this paper, an analysis about the number of refuge requests from Syria in european countries is made, regarding their level of Welfare. Trying to understand the movement trends of refugees, four variables from the Quality of Government database (QOG Standard - Jan - 2018), and one variable from the United Nations High Commissioner for Refugees (UNHCR Population Statistics - Resettlement) is used in this paper with the object of explaining the most recent refugees movements from Syria to European Countries, trying to understand if the number of refuge requests has some relation with the welfare state level of the countries to which the requests were directed.
 
 That said, it's important to enlight which were the variables used in the paper. The independent variables selected for this paper were extracted from the QOG Basic Database. And these variables were: 
 
-  - **ffp_ps** (using various algorithms, this variable is converted into a score representing the significance of the public  services for each country. The smaller, the better); 
+  - **ffp_ps** (using various algorithms, this variable is converted into a score representing the significance of the public services for each country. The smaller, the better); 
   - **bs_ee** (refers to equitable education and the qualitative indicators reflect the evaluations provided by more than 100 experts responding to the SGI’s survey of the state of affairs in various policy areas throughout the OECD and EU. For these indicators, the rating scale ranges from 1 (worst) to 10 (best); 
   - **bs_h** (refers to the quality of the health system. The qualitative indicators reflect the evaluations provided by more than 100 experts responding to the SGI’s survey of the state of affairs in various policy areas throughout  the OECD and EU. For these indicators, the rating scale ranges from 1 (worst) to 10 (best).); 
     - above these, the **fh_pr** is a variable that refers to political rights, and in this paper is used as a control variable (the specific list of rights considered varies over the years. Countries are graded between 1 (most free) and 7 (least free)). The **fh_pr** variable is used as control because it is an indicator of democracy and of the country's development then wants to see the effect of public services controlling for this variable of political development of the country. The effect of not including it can be an overestimation of the effect of the other variable.
@@ -489,13 +538,10 @@ vif(model4)
 Conclusion
 ==============
 
-Responding to the research question, it is notable that the variable public services was contrary to expectations when used as a Welfare State index, with a negative effect on the number of asylum applications of Syrian refugees in the European countries analyzed. In 2015, the negative effect was even more significant for this variable compared to 2011.
+Responding to the research question, it is notable that the variable "Public Services" was contrary to expectations when used as a Welfare State index, with a negative effect on the number of asylum applications of Syrian refugees in the European countries analyzed. In 2015, the negative effect was even more significant for this variable compared to 2011.
 Corroborating this result, equity in education also had no effect on the number of asylum applications, either in 2011 or 2015.
 On the other hand, the Health variable presented ambiguous results, not being significant in 2011, but having a positive and significant effect in 2015.
 The work hypothesis was falsified, since, with the variables analyzed, no evidence was found of a positive relationship between the Welfare State and the number of asylum requests for Syrian refugees in European countries
 
 References {#references .unnumbered}
 ==========
-
-Qog database
-unhcr database
