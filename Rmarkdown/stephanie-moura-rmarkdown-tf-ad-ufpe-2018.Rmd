@@ -85,25 +85,20 @@ references:
     issued: 
       year: 1992
       month: 
-       journal: "The Quality of Government Institute"
+      journal: "The Quality of Government Institute"
   - id: qog
     title: The Quality of Government Standard Dataset, version Jan18. 
     author: 
       - family: Teorell
         given: Jan
-     author: 
       - family: Dahlberg
         given: Stefan
-      author: 
       - family: Holmberg
         given: Sören    
-      author: 
       - family: Rothstein
         given: Bo     
-      author: 
       - family: Pachon
         given: Natalia
-      author: 
       - family: Svensson
         given: Richard
     container title: 
@@ -111,13 +106,13 @@ references:
     URL: http://www.qog.pol.gu.se 
     DOI: doi:10.18157/QoGStdJan18
     issue: 
-    publisher: University of Gothenburg: The Quality of Government Institute
+    publisher: University of Gothenburg The Quality of Government Institute
     page: 
-    type: database
+    type: article-journal
     issued: 
       year: 2018
       month: 1
-       journal: "UNHCR"
+      journal: "UNHCR"
   - id: briggs
     title: Resettlement population statistics
     author: 
@@ -130,7 +125,7 @@ references:
     issue: 
     publisher: UNHCR Population Statistics Database
     page: 
-    type: database
+    type: article-journal
     issued: 
       year: 2017
   
@@ -208,7 +203,7 @@ That said, it's important to enlight which were the variables used in the paper.
   - **ffp_ps** (using various algorithms, this variable is converted into a score representing the significance of the public services for each country. The smaller, the better); 
   - **bs_ee** (refers to equitable education and the qualitative indicators reflect the evaluations provided by more than 100 experts responding to the SGI’s survey of the state of affairs in various policy areas throughout the OECD and EU. For these indicators, the rating scale ranges from 1 (worst) to 10 (best); 
   - **bs_h** (refers to the quality of the health system. The qualitative indicators reflect the evaluations provided by more than 100 experts responding to the SGI’s survey of the state of affairs in various policy areas throughout  the OECD and EU. For these indicators, the rating scale ranges from 1 (worst) to 10 (best).); 
-    - above these, the **fh_pr** is a variable that refers to political rights, and in this paper is used as a control variable (the specific list of rights considered varies over the years. Countries are graded between 1 (most free) and 7 (least free)). The **fh_pr** variable is used as control because it is an indicator of democracy and of the country's development then wants to see the effect of public services controlling for this variable of political development of the country. The effect of not including it can be an overestimation of the effect of the other variable.
+  - Above these, the **fh_pr** is a variable that refers to political rights, and in this paper is used as a control variable (the specific list of rights considered varies over the years. Countries are graded between 1 (most free) and 7 (least free)). The **fh_pr** variable is used as control because it is an indicator of democracy and of the country's development then wants to see the effect of public services controlling for this variable of political development of the country. The effect of not including it can be an overestimation of the effect of the other variable.
     
 ```{r summary_variables, echo = FALSE, message = FALSE, warning = FALSE, results='hide'} 
 # descriptive summary of the chosen variables
@@ -520,7 +515,7 @@ ggplot(data = model4, aes(x = fitted(model4), y=residuals(model4))) +
 - Checking multicolinearity:
   Below it is possible to visualize the coefficients of inflation of the variance of the variables in the four models. None of the coefficients presented values higher than 7, indicating that we did not find evidence of presence of multicollinearity in the models.
   
-```{r vif models), echo = FALSE, message = FALSE, warning = FALSE} 
+```{r vif models, echo = FALSE, message = FALSE, warning = FALSE} 
 # Model 1
 vif(model1) 
 
